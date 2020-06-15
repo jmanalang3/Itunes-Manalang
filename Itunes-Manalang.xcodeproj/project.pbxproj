@@ -1,0 +1,846 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5A9558A42E7B8F5AFF1CFD18 /* Pods_Itunes_Manalang.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88CF57ED00E158B36B2B5438 /* Pods_Itunes_Manalang.framework */; };
+		67E9B8BDDE4B31E61E30253E /* Pods_Itunes_Manalang_Itunes_ManalangUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EBE558F64208510DB2D8E9B /* Pods_Itunes_Manalang_Itunes_ManalangUITests.framework */; };
+		70FD1C56DC1D0C27F246A77E /* Pods_Itunes_ManalangTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDB6F3E229ABC447EE81D764 /* Pods_Itunes_ManalangTests.framework */; };
+		F08895162497AEAD00A849D1 /* Aliases.swift in Sources */ = {isa = PBXBuildFile; fileRef = F08895152497AEAD00A849D1 /* Aliases.swift */; };
+		F088951A2497AF1800A849D1 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = F08895192497AF1800A849D1 /* Logger.swift */; };
+		F088951C2497AF3D00A849D1 /* AppNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F088951B2497AF3D00A849D1 /* AppNavigationController.swift */; };
+		F088951F2497AF6C00A849D1 /* UINavigationController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F088951E2497AF6C00A849D1 /* UINavigationController+Extensions.swift */; };
+		F08895212497AF7700A849D1 /* UIView+AutoLayouts+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F08895202497AF7700A849D1 /* UIView+AutoLayouts+Extensions.swift */; };
+		F08895232497AF8200A849D1 /* UIView+InterfaceBuilder+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F08895222497AF8200A849D1 /* UIView+InterfaceBuilder+Extensions.swift */; };
+		F08895252497AF8D00A849D1 /* UIView+HierarchyTraversion+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F08895242497AF8D00A849D1 /* UIView+HierarchyTraversion+Extensions.swift */; };
+		F08895332497BE0000A849D1 /* ApiError.swift in Sources */ = {isa = PBXBuildFile; fileRef = F08895322497BE0000A849D1 /* ApiError.swift */; };
+		F0A6BDBF2497795C00A3F984 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A6BDBE2497795C00A3F984 /* AppDelegate.swift */; };
+		F0A6BDC12497795C00A3F984 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A6BDC02497795C00A3F984 /* SceneDelegate.swift */; };
+		F0A6BDC32497795C00A3F984 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A6BDC22497795C00A3F984 /* ViewController.swift */; };
+		F0A6BDC92497795C00A3F984 /* Itunes_Manalang.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F0A6BDC72497795C00A3F984 /* Itunes_Manalang.xcdatamodeld */; };
+		F0A6BDCB2497795E00A3F984 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F0A6BDCA2497795E00A3F984 /* Assets.xcassets */; };
+		F0A6BDCE2497795E00A3F984 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F0A6BDCC2497795E00A3F984 /* LaunchScreen.storyboard */; };
+		F0A6BDD92497795E00A3F984 /* Itunes_ManalangTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A6BDD82497795E00A3F984 /* Itunes_ManalangTests.swift */; };
+		F0A6BDE42497795E00A3F984 /* Itunes_ManalangUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A6BDE32497795E00A3F984 /* Itunes_ManalangUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F0A6BDD52497795E00A3F984 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F0A6BDB32497795C00A3F984 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F0A6BDBA2497795C00A3F984;
+			remoteInfo = "Itunes-Manalang";
+		};
+		F0A6BDE02497795E00A3F984 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F0A6BDB32497795C00A3F984 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F0A6BDBA2497795C00A3F984;
+			remoteInfo = "Itunes-Manalang";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0AA6138BD3C29A5428FC8862 /* Pods-Itunes-ManalangTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Itunes-ManalangTests.debug.xcconfig"; path = "Target Support Files/Pods-Itunes-ManalangTests/Pods-Itunes-ManalangTests.debug.xcconfig"; sourceTree = "<group>"; };
+		4EBE558F64208510DB2D8E9B /* Pods_Itunes_Manalang_Itunes_ManalangUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Itunes_Manalang_Itunes_ManalangUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		675FEE2B1982F2FF72E0CFC3 /* Pods-Itunes-ManalangTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Itunes-ManalangTests.release.xcconfig"; path = "Target Support Files/Pods-Itunes-ManalangTests/Pods-Itunes-ManalangTests.release.xcconfig"; sourceTree = "<group>"; };
+		86870A2306B6516595CC5A73 /* Pods-Itunes-Manalang.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Itunes-Manalang.release.xcconfig"; path = "Target Support Files/Pods-Itunes-Manalang/Pods-Itunes-Manalang.release.xcconfig"; sourceTree = "<group>"; };
+		88CF57ED00E158B36B2B5438 /* Pods_Itunes_Manalang.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Itunes_Manalang.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		92D428C2132E9248FE4C87D8 /* Pods-Itunes-Manalang.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Itunes-Manalang.debug.xcconfig"; path = "Target Support Files/Pods-Itunes-Manalang/Pods-Itunes-Manalang.debug.xcconfig"; sourceTree = "<group>"; };
+		B06816D03FE39BB6BA5DF054 /* Pods-Itunes-Manalang-Itunes-ManalangUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Itunes-Manalang-Itunes-ManalangUITests.debug.xcconfig"; path = "Target Support Files/Pods-Itunes-Manalang-Itunes-ManalangUITests/Pods-Itunes-Manalang-Itunes-ManalangUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		C9DB0C2C2501FD8ECF140FA4 /* Pods-Itunes-Manalang-Itunes-ManalangUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Itunes-Manalang-Itunes-ManalangUITests.release.xcconfig"; path = "Target Support Files/Pods-Itunes-Manalang-Itunes-ManalangUITests/Pods-Itunes-Manalang-Itunes-ManalangUITests.release.xcconfig"; sourceTree = "<group>"; };
+		EDB6F3E229ABC447EE81D764 /* Pods_Itunes_ManalangTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Itunes_ManalangTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F08895152497AEAD00A849D1 /* Aliases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Aliases.swift; sourceTree = "<group>"; };
+		F08895192497AF1800A849D1 /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
+		F088951B2497AF3D00A849D1 /* AppNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppNavigationController.swift; sourceTree = "<group>"; };
+		F088951E2497AF6C00A849D1 /* UINavigationController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationController+Extensions.swift"; sourceTree = "<group>"; };
+		F08895202497AF7700A849D1 /* UIView+AutoLayouts+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+AutoLayouts+Extensions.swift"; sourceTree = "<group>"; };
+		F08895222497AF8200A849D1 /* UIView+InterfaceBuilder+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+InterfaceBuilder+Extensions.swift"; sourceTree = "<group>"; };
+		F08895242497AF8D00A849D1 /* UIView+HierarchyTraversion+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+HierarchyTraversion+Extensions.swift"; sourceTree = "<group>"; };
+		F08895322497BE0000A849D1 /* ApiError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiError.swift; sourceTree = "<group>"; };
+		F0A6BDBB2497795C00A3F984 /* Itunes-Manalang.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Itunes-Manalang.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F0A6BDBE2497795C00A3F984 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F0A6BDC02497795C00A3F984 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		F0A6BDC22497795C00A3F984 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F0A6BDC82497795C00A3F984 /* Itunes_Manalang.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Itunes_Manalang.xcdatamodel; sourceTree = "<group>"; };
+		F0A6BDCA2497795E00A3F984 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F0A6BDCD2497795E00A3F984 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F0A6BDCF2497795E00A3F984 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F0A6BDD42497795E00A3F984 /* Itunes-ManalangTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Itunes-ManalangTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F0A6BDD82497795E00A3F984 /* Itunes_ManalangTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Itunes_ManalangTests.swift; sourceTree = "<group>"; };
+		F0A6BDDA2497795E00A3F984 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F0A6BDDF2497795E00A3F984 /* Itunes-ManalangUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Itunes-ManalangUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F0A6BDE32497795E00A3F984 /* Itunes_ManalangUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Itunes_ManalangUITests.swift; sourceTree = "<group>"; };
+		F0A6BDE52497795E00A3F984 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F0A6BDB82497795C00A3F984 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5A9558A42E7B8F5AFF1CFD18 /* Pods_Itunes_Manalang.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F0A6BDD12497795E00A3F984 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				70FD1C56DC1D0C27F246A77E /* Pods_Itunes_ManalangTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F0A6BDDC2497795E00A3F984 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				67E9B8BDDE4B31E61E30253E /* Pods_Itunes_Manalang_Itunes_ManalangUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3CCC4ABB65CE01BD1AFA42F3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				92D428C2132E9248FE4C87D8 /* Pods-Itunes-Manalang.debug.xcconfig */,
+				86870A2306B6516595CC5A73 /* Pods-Itunes-Manalang.release.xcconfig */,
+				B06816D03FE39BB6BA5DF054 /* Pods-Itunes-Manalang-Itunes-ManalangUITests.debug.xcconfig */,
+				C9DB0C2C2501FD8ECF140FA4 /* Pods-Itunes-Manalang-Itunes-ManalangUITests.release.xcconfig */,
+				0AA6138BD3C29A5428FC8862 /* Pods-Itunes-ManalangTests.debug.xcconfig */,
+				675FEE2B1982F2FF72E0CFC3 /* Pods-Itunes-ManalangTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		F01343E62C676AB983E78DE8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				88CF57ED00E158B36B2B5438 /* Pods_Itunes_Manalang.framework */,
+				4EBE558F64208510DB2D8E9B /* Pods_Itunes_Manalang_Itunes_ManalangUITests.framework */,
+				EDB6F3E229ABC447EE81D764 /* Pods_Itunes_ManalangTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F08895142497AE7A00A849D1 /* ClientServices */ = {
+			isa = PBXGroup;
+			children = (
+				F08895262497B05900A849D1 /* API */,
+			);
+			path = ClientServices;
+			sourceTree = "<group>";
+		};
+		F08895172497AEC400A849D1 /* AppComponets */ = {
+			isa = PBXGroup;
+			children = (
+				F088951B2497AF3D00A849D1 /* AppNavigationController.swift */,
+			);
+			path = AppComponets;
+			sourceTree = "<group>";
+		};
+		F08895182497AEFF00A849D1 /* Logger */ = {
+			isa = PBXGroup;
+			children = (
+				F08895192497AF1800A849D1 /* Logger.swift */,
+			);
+			path = Logger;
+			sourceTree = "<group>";
+		};
+		F088951D2497AF5A00A849D1 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				F088951E2497AF6C00A849D1 /* UINavigationController+Extensions.swift */,
+				F08895202497AF7700A849D1 /* UIView+AutoLayouts+Extensions.swift */,
+				F08895222497AF8200A849D1 /* UIView+InterfaceBuilder+Extensions.swift */,
+				F08895242497AF8D00A849D1 /* UIView+HierarchyTraversion+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		F08895262497B05900A849D1 /* API */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		F0A6BDB22497795C00A3F984 = {
+			isa = PBXGroup;
+			children = (
+				F0A6BDBD2497795C00A3F984 /* Itunes-Manalang */,
+				F0A6BDD72497795E00A3F984 /* Itunes-ManalangTests */,
+				F0A6BDE22497795E00A3F984 /* Itunes-ManalangUITests */,
+				F0A6BDBC2497795C00A3F984 /* Products */,
+				3CCC4ABB65CE01BD1AFA42F3 /* Pods */,
+				F01343E62C676AB983E78DE8 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		F0A6BDBC2497795C00A3F984 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F0A6BDBB2497795C00A3F984 /* Itunes-Manalang.app */,
+				F0A6BDD42497795E00A3F984 /* Itunes-ManalangTests.xctest */,
+				F0A6BDDF2497795E00A3F984 /* Itunes-ManalangUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F0A6BDBD2497795C00A3F984 /* Itunes-Manalang */ = {
+			isa = PBXGroup;
+			children = (
+				F0A6BDBE2497795C00A3F984 /* AppDelegate.swift */,
+				F0A6BDC02497795C00A3F984 /* SceneDelegate.swift */,
+				F0A6BDF12497798100A3F984 /* Generals */,
+				F08895142497AE7A00A849D1 /* ClientServices */,
+				F088951D2497AF5A00A849D1 /* Extensions */,
+				F0A6BDF32497799D00A3F984 /* Resources */,
+				F0A6BDF22497799300A3F984 /* Screens */,
+			);
+			path = "Itunes-Manalang";
+			sourceTree = "<group>";
+		};
+		F0A6BDD72497795E00A3F984 /* Itunes-ManalangTests */ = {
+			isa = PBXGroup;
+			children = (
+				F0A6BDD82497795E00A3F984 /* Itunes_ManalangTests.swift */,
+				F0A6BDDA2497795E00A3F984 /* Info.plist */,
+			);
+			path = "Itunes-ManalangTests";
+			sourceTree = "<group>";
+		};
+		F0A6BDE22497795E00A3F984 /* Itunes-ManalangUITests */ = {
+			isa = PBXGroup;
+			children = (
+				F0A6BDE32497795E00A3F984 /* Itunes_ManalangUITests.swift */,
+				F0A6BDE52497795E00A3F984 /* Info.plist */,
+			);
+			path = "Itunes-ManalangUITests";
+			sourceTree = "<group>";
+		};
+		F0A6BDF12497798100A3F984 /* Generals */ = {
+			isa = PBXGroup;
+			children = (
+				F08895152497AEAD00A849D1 /* Aliases.swift */,
+				F08895322497BE0000A849D1 /* ApiError.swift */,
+				F08895172497AEC400A849D1 /* AppComponets */,
+				F08895182497AEFF00A849D1 /* Logger */,
+			);
+			path = Generals;
+			sourceTree = "<group>";
+		};
+		F0A6BDF22497799300A3F984 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				F0A6BDC22497795C00A3F984 /* ViewController.swift */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		F0A6BDF32497799D00A3F984 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				F0A6BDCA2497795E00A3F984 /* Assets.xcassets */,
+				F0A6BDCF2497795E00A3F984 /* Info.plist */,
+				F0A6BDCC2497795E00A3F984 /* LaunchScreen.storyboard */,
+				F0A6BDC72497795C00A3F984 /* Itunes_Manalang.xcdatamodeld */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F0A6BDBA2497795C00A3F984 /* Itunes-Manalang */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F0A6BDE82497795E00A3F984 /* Build configuration list for PBXNativeTarget "Itunes-Manalang" */;
+			buildPhases = (
+				3F76F6145DE57133C083FBE3 /* [CP] Check Pods Manifest.lock */,
+				F0A6BDB72497795C00A3F984 /* Sources */,
+				F0A6BDB82497795C00A3F984 /* Frameworks */,
+				F0A6BDB92497795C00A3F984 /* Resources */,
+				143FE2F5A7CD0DCBEF423B86 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Itunes-Manalang";
+			productName = "Itunes-Manalang";
+			productReference = F0A6BDBB2497795C00A3F984 /* Itunes-Manalang.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F0A6BDD32497795E00A3F984 /* Itunes-ManalangTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F0A6BDEB2497795E00A3F984 /* Build configuration list for PBXNativeTarget "Itunes-ManalangTests" */;
+			buildPhases = (
+				010F11DA069B05C3B14DB875 /* [CP] Check Pods Manifest.lock */,
+				F0A6BDD02497795E00A3F984 /* Sources */,
+				F0A6BDD12497795E00A3F984 /* Frameworks */,
+				F0A6BDD22497795E00A3F984 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F0A6BDD62497795E00A3F984 /* PBXTargetDependency */,
+			);
+			name = "Itunes-ManalangTests";
+			productName = "Itunes-ManalangTests";
+			productReference = F0A6BDD42497795E00A3F984 /* Itunes-ManalangTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		F0A6BDDE2497795E00A3F984 /* Itunes-ManalangUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F0A6BDEE2497795E00A3F984 /* Build configuration list for PBXNativeTarget "Itunes-ManalangUITests" */;
+			buildPhases = (
+				6B859D4711C8D7873CC1B0F9 /* [CP] Check Pods Manifest.lock */,
+				F0A6BDDB2497795E00A3F984 /* Sources */,
+				F0A6BDDC2497795E00A3F984 /* Frameworks */,
+				F0A6BDDD2497795E00A3F984 /* Resources */,
+				186B86FA7259DFAA2BA51B1B /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F0A6BDE12497795E00A3F984 /* PBXTargetDependency */,
+			);
+			name = "Itunes-ManalangUITests";
+			productName = "Itunes-ManalangUITests";
+			productReference = F0A6BDDF2497795E00A3F984 /* Itunes-ManalangUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F0A6BDB32497795C00A3F984 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1150;
+				LastUpgradeCheck = 1150;
+				ORGANIZATIONNAME = "Jeffrey Manalang";
+				TargetAttributes = {
+					F0A6BDBA2497795C00A3F984 = {
+						CreatedOnToolsVersion = 11.5;
+					};
+					F0A6BDD32497795E00A3F984 = {
+						CreatedOnToolsVersion = 11.5;
+						TestTargetID = F0A6BDBA2497795C00A3F984;
+					};
+					F0A6BDDE2497795E00A3F984 = {
+						CreatedOnToolsVersion = 11.5;
+						TestTargetID = F0A6BDBA2497795C00A3F984;
+					};
+				};
+			};
+			buildConfigurationList = F0A6BDB62497795C00A3F984 /* Build configuration list for PBXProject "Itunes-Manalang" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F0A6BDB22497795C00A3F984;
+			productRefGroup = F0A6BDBC2497795C00A3F984 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F0A6BDBA2497795C00A3F984 /* Itunes-Manalang */,
+				F0A6BDD32497795E00A3F984 /* Itunes-ManalangTests */,
+				F0A6BDDE2497795E00A3F984 /* Itunes-ManalangUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F0A6BDB92497795C00A3F984 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F0A6BDCE2497795E00A3F984 /* LaunchScreen.storyboard in Resources */,
+				F0A6BDCB2497795E00A3F984 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F0A6BDD22497795E00A3F984 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F0A6BDDD2497795E00A3F984 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		010F11DA069B05C3B14DB875 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Itunes-ManalangTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		143FE2F5A7CD0DCBEF423B86 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Itunes-Manalang/Pods-Itunes-Manalang-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Itunes-Manalang/Pods-Itunes-Manalang-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Itunes-Manalang/Pods-Itunes-Manalang-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		186B86FA7259DFAA2BA51B1B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Itunes-Manalang-Itunes-ManalangUITests/Pods-Itunes-Manalang-Itunes-ManalangUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Itunes-Manalang-Itunes-ManalangUITests/Pods-Itunes-Manalang-Itunes-ManalangUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Itunes-Manalang-Itunes-ManalangUITests/Pods-Itunes-Manalang-Itunes-ManalangUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3F76F6145DE57133C083FBE3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Itunes-Manalang-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6B859D4711C8D7873CC1B0F9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Itunes-Manalang-Itunes-ManalangUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F0A6BDB72497795C00A3F984 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F08895232497AF8200A849D1 /* UIView+InterfaceBuilder+Extensions.swift in Sources */,
+				F08895332497BE0000A849D1 /* ApiError.swift in Sources */,
+				F088951C2497AF3D00A849D1 /* AppNavigationController.swift in Sources */,
+				F08895162497AEAD00A849D1 /* Aliases.swift in Sources */,
+				F08895252497AF8D00A849D1 /* UIView+HierarchyTraversion+Extensions.swift in Sources */,
+				F088951A2497AF1800A849D1 /* Logger.swift in Sources */,
+				F0A6BDC32497795C00A3F984 /* ViewController.swift in Sources */,
+				F0A6BDBF2497795C00A3F984 /* AppDelegate.swift in Sources */,
+				F0A6BDC92497795C00A3F984 /* Itunes_Manalang.xcdatamodeld in Sources */,
+				F0A6BDC12497795C00A3F984 /* SceneDelegate.swift in Sources */,
+				F08895212497AF7700A849D1 /* UIView+AutoLayouts+Extensions.swift in Sources */,
+				F088951F2497AF6C00A849D1 /* UINavigationController+Extensions.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F0A6BDD02497795E00A3F984 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F0A6BDD92497795E00A3F984 /* Itunes_ManalangTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F0A6BDDB2497795E00A3F984 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F0A6BDE42497795E00A3F984 /* Itunes_ManalangUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F0A6BDD62497795E00A3F984 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F0A6BDBA2497795C00A3F984 /* Itunes-Manalang */;
+			targetProxy = F0A6BDD52497795E00A3F984 /* PBXContainerItemProxy */;
+		};
+		F0A6BDE12497795E00A3F984 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F0A6BDBA2497795C00A3F984 /* Itunes-Manalang */;
+			targetProxy = F0A6BDE02497795E00A3F984 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		F0A6BDCC2497795E00A3F984 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F0A6BDCD2497795E00A3F984 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F0A6BDE62497795E00A3F984 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		F0A6BDE72497795E00A3F984 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F0A6BDE92497795E00A3F984 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 92D428C2132E9248FE4C87D8 /* Pods-Itunes-Manalang.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "$(SRCROOT)/Itunes-Manalang/Resources/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.manalang.exam.Itunes-Manalang";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F0A6BDEA2497795E00A3F984 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 86870A2306B6516595CC5A73 /* Pods-Itunes-Manalang.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "$(SRCROOT)/Itunes-Manalang/Resources/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.manalang.exam.Itunes-Manalang";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		F0A6BDEC2497795E00A3F984 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0AA6138BD3C29A5428FC8862 /* Pods-Itunes-ManalangTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Itunes-ManalangTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.manalang.exam.Itunes-ManalangTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Itunes-Manalang.app/Itunes-Manalang";
+			};
+			name = Debug;
+		};
+		F0A6BDED2497795E00A3F984 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 675FEE2B1982F2FF72E0CFC3 /* Pods-Itunes-ManalangTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Itunes-ManalangTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.manalang.exam.Itunes-ManalangTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Itunes-Manalang.app/Itunes-Manalang";
+			};
+			name = Release;
+		};
+		F0A6BDEF2497795E00A3F984 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B06816D03FE39BB6BA5DF054 /* Pods-Itunes-Manalang-Itunes-ManalangUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Itunes-ManalangUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.manalang.exam.Itunes-ManalangUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Itunes-Manalang";
+			};
+			name = Debug;
+		};
+		F0A6BDF02497795E00A3F984 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C9DB0C2C2501FD8ECF140FA4 /* Pods-Itunes-Manalang-Itunes-ManalangUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Itunes-ManalangUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.manalang.exam.Itunes-ManalangUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Itunes-Manalang";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F0A6BDB62497795C00A3F984 /* Build configuration list for PBXProject "Itunes-Manalang" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F0A6BDE62497795E00A3F984 /* Debug */,
+				F0A6BDE72497795E00A3F984 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F0A6BDE82497795E00A3F984 /* Build configuration list for PBXNativeTarget "Itunes-Manalang" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F0A6BDE92497795E00A3F984 /* Debug */,
+				F0A6BDEA2497795E00A3F984 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F0A6BDEB2497795E00A3F984 /* Build configuration list for PBXNativeTarget "Itunes-ManalangTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F0A6BDEC2497795E00A3F984 /* Debug */,
+				F0A6BDED2497795E00A3F984 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F0A6BDEE2497795E00A3F984 /* Build configuration list for PBXNativeTarget "Itunes-ManalangUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F0A6BDEF2497795E00A3F984 /* Debug */,
+				F0A6BDF02497795E00A3F984 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		F0A6BDC72497795C00A3F984 /* Itunes_Manalang.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				F0A6BDC82497795C00A3F984 /* Itunes_Manalang.xcdatamodel */,
+			);
+			currentVersion = F0A6BDC82497795C00A3F984 /* Itunes_Manalang.xcdatamodel */;
+			path = Itunes_Manalang.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = F0A6BDB32497795C00A3F984 /* Project object */;
+}
