@@ -19,6 +19,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window?.windowScene = windowScene
         let controller =  ViewController()
         controller.view.backgroundColor = .red
+        
+        // MARK: - SetUp CoreDataManager
+        CoreDataManager.setUp(withDataModelName: "Itunes_Manalang",
+                              bundle: .main, persistentStoreName: "ItunesManalangDatabase")
+        
         window?.rootViewController = controller
         window?.makeKeyAndVisible()
     }
