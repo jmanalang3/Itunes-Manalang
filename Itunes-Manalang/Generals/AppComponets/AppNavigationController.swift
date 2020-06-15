@@ -20,24 +20,40 @@ class AppNavigationController: UINavigationController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        delegate = self
-        clearBackgroundWithDivider()
+        setup()
     }
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
         .lightContent
     }
-
+    
     override var childForStatusBarStyle: UIViewController? {
         topViewController
     }
 }
 
+//MARK: - Setup Methods
+
+fileprivate extension AppNavigationController {
+    
+    func setup(){
+        setupUI()
+        delegate = self
+    }
+    
+    func setupUI() {
+        navigationBar.titleTextAttributes = [.font: Fonts.Helvetica.bold(of: 18), .foregroundColor: UIColor.white]
+    }
+}
+
+// MARK: UINavigationControllerDelegate
+
 extension AppNavigationController: UINavigationControllerDelegate {
     
     func navigationController(_ navigationController: UINavigationController,
                               willShow viewController: UIViewController, animated: Bool) {
-        viewController.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+        viewController.navigationItem.backBarButtonItem = UIBarButtonItem(title: "",
+                                                                          style: .plain, target: nil, action: nil)
     }
     
     func navigationController(_ navigationController: UINavigationController,

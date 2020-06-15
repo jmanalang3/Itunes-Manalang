@@ -17,14 +17,16 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         window = UIWindow(frame: windowScene.coordinateSpace.bounds)
         window?.windowScene = windowScene
-        let controller =  ViewController()
-        controller.view.backgroundColor = .red
-        
+
         // MARK: - SetUp CoreDataManager
-        CoreDataManager.setUp(withDataModelName: "Itunes_Manalang",
-                              bundle: .main, persistentStoreName: "ItunesManalangDatabase")
         
-        window?.rootViewController = controller
+        CoreDataManager.setUp(withDataModelName: CoreDataName.modelName,
+                              bundle: .main,
+                              persistentStoreName: CoreDataName.persistentName)
+                    
+        let controller = ArtistListViewController()
+        let rootViewController = AppNavigationController(rootViewController: controller)
+        window?.rootViewController = rootViewController
         window?.makeKeyAndVisible()
     }
 

@@ -1,5 +1,5 @@
 //
-//  CDMovie+CoreDataProperties.swift
+//  CDArtist+CoreDataProperties.swift
 //  
 //
 //  Created by Jeffrey Manalang (HLB) on 15/06/2020.
@@ -10,10 +10,10 @@ import Foundation
 import CoreData
 
 
-extension CDMovie {
+extension CDArtist {
 
-    @nonobjc public class func fetchRequest() -> NSFetchRequest<CDMovie> {
-        return NSFetchRequest<CDMovie>(entityName: "CDMovie")
+    @nonobjc public class func fetchRequest() -> NSFetchRequest<CDArtist> {
+        return NSFetchRequest<CDArtist>(entityName: "CDArtist")
     }
 
     @NSManaged public var artistId: Int32

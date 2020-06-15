@@ -1,5 +1,5 @@
 //
-//  APIMovie.swift
+//  Artist.swift
 //  Itunes-Manalang
 //
 //  Created by Jeffrey Manalang (HLB) on 16/06/2020.
@@ -9,13 +9,13 @@
 import Foundation
 import Alamofire
 
-enum APIMovie: APIRouter {
+enum APIArtist: APIRouter {
     
-    case getMovieList
+    case getArtistList
     
     var path: String {
         switch self {
-        case .getMovieList:
+        case .getArtistList:
             return "search?term=star&amp;country=au&amp;media=movie&amp;all"
         }
     }
