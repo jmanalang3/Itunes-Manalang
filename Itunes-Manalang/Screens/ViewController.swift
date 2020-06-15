@@ -16,11 +16,50 @@ class ViewController: UIViewController {
         
         let request = AF.request("https://itunes.apple.com/search?term=star&amp;country=au&amp;media=movie&amp;all")
         request.responseJSON { (data) in
-            print(data)
+            // print(data)
         }
         request.responseDecodable(of: ApiDefaultResult.self) { (response) in
-            guard let films = response.value else { return }
-            Log.d(films.data)
+            guard let value = response.value,
+                let data = value.data else { return }
+            
+            //  Log.d(data)
+            
+            DispatchQueue.main.async {
+                let context = CoreDataManager.mainContext
+
+                data.forEach {
+                    do {
+                       try CDMovie.savingRecord(movie: $0, context: context)
+                    } catch {
+                        print(error.localizedDescription)
+                    }
+                }
+                
+                CoreDataManager.persist()
+                
+                
+                let fetchRequest = CoreDataManager.fetchRequest(entity: CDMovie.self,
+                                                                sortDescriptors: [],
+                                                                context: context)
+                let fetchedResultsController = CoreDataManager.fetchedResultsControllert(entity: CDMovie.self,
+                                                                                         request: fetchRequest,
+                                                                                         context: context)
+            
+                do {
+                    try fetchedResultsController.performFetch()
+                } catch {
+                    print(error.localizedDescription)
+                }
+            
+                guard let objects = fetchedResultsController.fetchedObjects else {
+                    return
+                }
+                
+                objects.forEach {
+                    Log.d($0.artistId)
+                }
+            }
+            
         }
         
     }
@@ -70,4 +109,5 @@ struct Movie: Codable {
     var trackTimeMillis: Int?
     var trackViewUrl: String?
     var wrapperType: String?
+    
 }

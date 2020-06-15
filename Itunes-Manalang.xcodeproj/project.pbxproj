@@ -18,6 +18,11 @@
 		F08895232497AF8200A849D1 /* UIView+InterfaceBuilder+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F08895222497AF8200A849D1 /* UIView+InterfaceBuilder+Extensions.swift */; };
 		F08895252497AF8D00A849D1 /* UIView+HierarchyTraversion+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F08895242497AF8D00A849D1 /* UIView+HierarchyTraversion+Extensions.swift */; };
 		F08895332497BE0000A849D1 /* ApiError.swift in Sources */ = {isa = PBXBuildFile; fileRef = F08895322497BE0000A849D1 /* ApiError.swift */; };
+		F09B25952497C81A0013287E /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F09B25942497C81A0013287E /* CoreDataManager.swift */; };
+		F09B25972497C83C0013287E /* CoreDataManagerError.swift in Sources */ = {isa = PBXBuildFile; fileRef = F09B25962497C83C0013287E /* CoreDataManagerError.swift */; };
+		F09B25992497C8460013287E /* PersistentStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = F09B25982497C8460013287E /* PersistentStore.swift */; };
+		F09B25C02497D06B0013287E /* CDMovie+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F09B25BE2497D06B0013287E /* CDMovie+CoreDataProperties.swift */; };
+		F09B25C12497D06B0013287E /* CDMovie+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F09B25BF2497D06B0013287E /* CDMovie+CoreDataClass.swift */; };
 		F0A6BDBF2497795C00A3F984 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A6BDBE2497795C00A3F984 /* AppDelegate.swift */; };
 		F0A6BDC12497795C00A3F984 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A6BDC02497795C00A3F984 /* SceneDelegate.swift */; };
 		F0A6BDC32497795C00A3F984 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A6BDC22497795C00A3F984 /* ViewController.swift */; };
@@ -63,6 +68,11 @@
 		F08895222497AF8200A849D1 /* UIView+InterfaceBuilder+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+InterfaceBuilder+Extensions.swift"; sourceTree = "<group>"; };
 		F08895242497AF8D00A849D1 /* UIView+HierarchyTraversion+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+HierarchyTraversion+Extensions.swift"; sourceTree = "<group>"; };
 		F08895322497BE0000A849D1 /* ApiError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiError.swift; sourceTree = "<group>"; };
+		F09B25942497C81A0013287E /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		F09B25962497C83C0013287E /* CoreDataManagerError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManagerError.swift; sourceTree = "<group>"; };
+		F09B25982497C8460013287E /* PersistentStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistentStore.swift; sourceTree = "<group>"; };
+		F09B25BE2497D06B0013287E /* CDMovie+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CDMovie+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		F09B25BF2497D06B0013287E /* CDMovie+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CDMovie+CoreDataClass.swift"; sourceTree = "<group>"; };
 		F0A6BDBB2497795C00A3F984 /* Itunes-Manalang.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Itunes-Manalang.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0A6BDBE2497795C00A3F984 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F0A6BDC02497795C00A3F984 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -130,12 +140,13 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		F08895142497AE7A00A849D1 /* ClientServices */ = {
+		F08895142497AE7A00A849D1 /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
-				F08895262497B05900A849D1 /* API */,
+				F09B25BF2497D06B0013287E /* CDMovie+CoreDataClass.swift */,
+				F09B25BE2497D06B0013287E /* CDMovie+CoreDataProperties.swift */,
 			);
-			path = ClientServices;
+			path = CoreData;
 			sourceTree = "<group>";
 		};
 		F08895172497AEC400A849D1 /* AppComponets */ = {
@@ -172,6 +183,16 @@
 			path = API;
 			sourceTree = "<group>";
 		};
+		F09B25932497C8030013287E /* CoreDataManager */ = {
+			isa = PBXGroup;
+			children = (
+				F09B25942497C81A0013287E /* CoreDataManager.swift */,
+				F09B25962497C83C0013287E /* CoreDataManagerError.swift */,
+				F09B25982497C8460013287E /* PersistentStore.swift */,
+			);
+			path = CoreDataManager;
+			sourceTree = "<group>";
+		};
 		F0A6BDB22497795C00A3F984 = {
 			isa = PBXGroup;
 			children = (
@@ -200,7 +221,6 @@
 				F0A6BDBE2497795C00A3F984 /* AppDelegate.swift */,
 				F0A6BDC02497795C00A3F984 /* SceneDelegate.swift */,
 				F0A6BDF12497798100A3F984 /* Generals */,
-				F08895142497AE7A00A849D1 /* ClientServices */,
 				F088951D2497AF5A00A849D1 /* Extensions */,
 				F0A6BDF32497799D00A3F984 /* Resources */,
 				F0A6BDF22497799300A3F984 /* Screens */,
@@ -231,6 +251,9 @@
 			children = (
 				F08895152497AEAD00A849D1 /* Aliases.swift */,
 				F08895322497BE0000A849D1 /* ApiError.swift */,
+				F08895262497B05900A849D1 /* API */,
+				F08895142497AE7A00A849D1 /* CoreData */,
+				F09B25932497C8030013287E /* CoreDataManager */,
 				F08895172497AEC400A849D1 /* AppComponets */,
 				F08895182497AEFF00A849D1 /* Logger */,
 			);
@@ -494,6 +517,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F09B25C12497D06B0013287E /* CDMovie+CoreDataClass.swift in Sources */,
 				F08895232497AF8200A849D1 /* UIView+InterfaceBuilder+Extensions.swift in Sources */,
 				F08895332497BE0000A849D1 /* ApiError.swift in Sources */,
 				F088951C2497AF3D00A849D1 /* AppNavigationController.swift in Sources */,
@@ -501,8 +525,12 @@
 				F08895252497AF8D00A849D1 /* UIView+HierarchyTraversion+Extensions.swift in Sources */,
 				F088951A2497AF1800A849D1 /* Logger.swift in Sources */,
 				F0A6BDC32497795C00A3F984 /* ViewController.swift in Sources */,
+				F09B25972497C83C0013287E /* CoreDataManagerError.swift in Sources */,
+				F09B25952497C81A0013287E /* CoreDataManager.swift in Sources */,
 				F0A6BDBF2497795C00A3F984 /* AppDelegate.swift in Sources */,
+				F09B25C02497D06B0013287E /* CDMovie+CoreDataProperties.swift in Sources */,
 				F0A6BDC92497795C00A3F984 /* Itunes_Manalang.xcdatamodeld in Sources */,
+				F09B25992497C8460013287E /* PersistentStore.swift in Sources */,
 				F0A6BDC12497795C00A3F984 /* SceneDelegate.swift in Sources */,
 				F08895212497AF7700A849D1 /* UIView+AutoLayouts+Extensions.swift in Sources */,
 				F088951F2497AF6C00A849D1 /* UINavigationController+Extensions.swift in Sources */,
