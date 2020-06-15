@@ -15,3 +15,8 @@ enum InternetConnectionErrorCode: Int {
 class APIBasePath {
     static var url = "https://itunes.apple.com/"
 }
+
+class CoreDataName {
+    static var modelName = "Itunes_Manalang"
+    static var persistentName = "ItunesManalangDatabase"
+}

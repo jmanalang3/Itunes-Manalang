@@ -18,10 +18,10 @@ class API {
     
     init() {}
     
-    // Call Get Movie List API
-    func getMovieList() {
+    // Call Get Artist List API
+    func getArtistList() {
         let manager = APIManager.shared
-        let request = manager.session.request(APIMovie.getMovieList)
+        let request = manager.session.request(APIArtist.getArtistList)
         request.responseJSON { (data) in
              print(data)
         }
