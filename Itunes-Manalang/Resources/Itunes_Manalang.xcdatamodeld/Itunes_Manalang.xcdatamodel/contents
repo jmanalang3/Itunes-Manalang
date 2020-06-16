@@ -3,8 +3,24 @@
     <entity name="CDArtist" representedClassName="CDArtist" syncable="YES">
         <attribute name="artistId" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="artistName" optional="YES" attributeType="String"/>
+        <attribute name="artistViewUrl" optional="YES" attributeType="String"/>
+        <attribute name="artworkUrl30" optional="YES" attributeType="String"/>
+        <attribute name="artworkUrl60" optional="YES" attributeType="String"/>
+        <attribute name="artworkUrl100" optional="YES" attributeType="String"/>
+        <attribute name="longDescription" optional="YES" attributeType="String"/>
+        <attribute name="primaryGenreName" optional="YES" attributeType="String"/>
+        <attribute name="releaseDate" optional="YES" attributeType="String"/>
+        <attribute name="trackName" optional="YES" attributeType="String"/>
+        <attribute name="trackPrice" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <relationship name="log" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CDLog" inverseName="artist" inverseEntity="CDLog"/>
+    </entity>
+    <entity name="CDLog" representedClassName="CDLog" syncable="YES">
+        <attribute name="lastVisitDate" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="state" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <relationship name="artist" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CDArtist" inverseName="log" inverseEntity="CDArtist"/>
     </entity>
     <elements>
-        <element name="CDArtist" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="CDArtist" positionX="160" positionY="192" width="128" height="223"/>
+        <element name="CDLog" positionX="162" positionY="279" width="128" height="88"/>
     </elements>
 </model>

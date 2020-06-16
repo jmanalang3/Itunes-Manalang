@@ -15,21 +15,25 @@ class ArtistTableViewCell: UITableViewCell {
     @IBOutlet private weak var lblArtistReleaseDate: UILabel!
     @IBOutlet private weak var lblArtistDescription: UILabel!
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
-    
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-        
-        // Configure the view for the selected state
-    }
+    @IBOutlet private weak var lblTractName: UILabel!
+    @IBOutlet private weak var lblGenre: UILabel!
+    @IBOutlet private weak var lblPrice: UILabel!
     
     func configure(with artist: CDArtist){
-        //        self.imvMovie.downloadImageWithCaching(with: movie.imageURL,placeholderImage: #imageLiteral(resourceName: "placeholder-image"))
+        
+        self.imvArtist.downloadImageWithCaching(with: artist.artworkUrl100, placeholderImage: #imageLiteral(resourceName: "placeholder-image"))
         self.lblArtistTitle.text = artist.artistName ?? ""
-        //        self.lblMovieDescription.text = movie.overview ?? ""
-        //        self.lblMovieReleaseDate.text = movie.releaseDate ?? ""
+        self.lblArtistDescription.text = artist.longDescription ?? ""
+        
+        if let releaseDate = artist.releaseDate,
+            let date = DateApp.date(fromString: releaseDate , withFormat: .itunes) {
+            let formated = DateApp.string(fromDate: date, withFormat: .facebookServer)
+            self.lblArtistReleaseDate.text = formated
+        }
+        
+        lblTractName.text = artist.trackName
+        lblGenre.text = artist.primaryGenreName
+        lblPrice.text = artist.trackPrice?.stringValue
+ 
     }
 }

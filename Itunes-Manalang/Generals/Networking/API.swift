@@ -19,11 +19,19 @@ class API {
     init() {}
     
     // Call Get Artist List API
-    func getArtistList() {
+    func getArtistList(completion: ApiOperationCompletionBlock<[Artist]>? = nil) {
         let manager = APIManager.shared
         let request = manager.session.request(APIArtist.getArtistList)
-        request.responseJSON { (data) in
-             print(data)
+        request.responseDecodable(of: GetArtistResponse.self) { (response) in
+            if let error = response.error {
+                completion?(.failure(ApiError(error.localizedDescription)))
+                return
+            }
+            guard let value = response.value, let artists = value.data else {
+                completion?(.success([]))
+                return
+            }
+            completion?(.success(artists))
         }
     }
 }

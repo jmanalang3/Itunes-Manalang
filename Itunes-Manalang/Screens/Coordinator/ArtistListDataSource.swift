@@ -22,16 +22,15 @@ class ArtistListDataSource: NSObject, UITableViewDataSource {
         return fetchedResultsController
     }()
     
+    var items: [CDArtist] {
+        return fetchedResultsController.fetchedObjects ?? []
+    }
+    
     var identifier: String
     
     init(withIdentifier identifier: String) {
         self.identifier = identifier
         super.init()
-        do {
-            try fetchedResultsController.performFetch()
-        }catch{
-            print(error.localizedDescription)
-        }
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -39,6 +38,11 @@ class ArtistListDataSource: NSObject, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        do {
+            try fetchedResultsController.performFetch()
+        }catch{
+            Log.e(error.localizedDescription)
+        }
         guard let data = fetchedResultsController.fetchedObjects else { return 0 }
         return data.count
     }
