@@ -2,7 +2,7 @@
 
 ## Project defination
 
-This is the a exam project, I have integrated API itunes (https://itunes.apple.com/search?term=star&amp;country=au&amp;media=movie&amp;all). for the listing of Artist and other to show details for the following fields.
+This is the a project, I have integrated API itunes (https://itunes.apple.com/search?term=star&amp;country=au&amp;media=movie&amp;all). for the listing of Artist and other to show details for the following fields.
 
 * Track Name
 * Artwork (there are multiple size formats, you should pick one that you consider appropriate for the task) 
@@ -16,7 +16,7 @@ This is the a exam project, I have integrated API itunes (https://itunes.apple.c
 ## This are the key concepts I have used for this demo
 <li>MVVM stucture with Coordinators<br/></li>
 <li>Dependency Injection<br/></li>
-<li>Offline support usign CoreData<br/></li>
+<li>Offline support using CoreData<br/></li>
 <li>API Middle-Ware<br/></li>
 <li>Create UI componets that can be reuse<br/></li>
 
