@@ -21,7 +21,8 @@ extension UIImageView {
             return
         }
         let imageResource = ImageResource(downloadURL: imageURL)
-        self.kf.setImage(with: imageResource, placeholder: nil, options: [.transition(.fade(0.1))], progressBlock: nil)
+        self.kf.setImage(with: imageResource, placeholder: placeholderImage,
+                         options: [.transition(.fade(0.1))], progressBlock: nil)
     }
     
 }

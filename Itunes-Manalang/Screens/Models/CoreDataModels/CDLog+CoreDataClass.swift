@@ -46,7 +46,6 @@ extension CDLog {
     }
     
     static func fetch(by id: Int32, context: NSManagedObjectContext) throws -> CDLog? {
-        let stateKey = #keyPath(CDLog.state)
         let fetchRequest = CoreDataManager.fetchRequest(entity: Self.self, predicate: nil,
                                                         sortDescriptors: [], context: context)
         do {
