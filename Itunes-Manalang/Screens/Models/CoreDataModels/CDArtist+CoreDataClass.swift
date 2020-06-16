@@ -26,8 +26,7 @@ public class CDArtist: NSManagedObject {
                 rawArtist = results.first
             }else {
                 rawArtist = CDArtist(context: context)
-                rawArtist?.insert(artist: artist, context: context)
-            }
+                rawArtist?.insert(artist: artist, context: context)            }
         }catch {
             throw error
         }
@@ -36,7 +35,6 @@ public class CDArtist: NSManagedObject {
     
 }
 
-
 extension CDArtist {
     
     func insert(artist: Artist, context: NSManagedObjectContext) {
@@ -44,23 +42,16 @@ extension CDArtist {
             self.artistId = Int32(id)
         }
         self.artistName = artist.artistName
-    }
-    
-    func isItemExist(id: Int, predicate: NSPredicate? = nil,
-                     sortDescriptors: [NSSortDescriptor] = [],
-                     context: NSManagedObjectContext) -> Bool {
-        let fetchRequest = CoreDataManager.fetchRequest(entity: Self.self, predicate: predicate,
-                                                        sortDescriptors: sortDescriptors, context: context)
-        do {
-            let count = try context.count(for: fetchRequest)
-            if count > 0 {
-                return true
-            }else {
-                return false
-            }
-        }catch {
-            return false
-        }
+        self.artistViewUrl = artist.artistViewUrl
+        self.artworkUrl100 = artist.artworkUrl100
+        self.artworkUrl30 = artist.artworkUrl30
+        self.artworkUrl60 = artist.artworkUrl60
+        self.releaseDate = artist.releaseDate
+        self.longDescription = artist.longDescription
+        
+        self.trackName = artist.trackName
+        self.trackPrice = NSNumber(value: artist.trackPrice ?? 0.00)
+        self.primaryGenreName = artist.primaryGenreName
     }
     
 }

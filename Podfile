@@ -6,6 +6,7 @@ target 'Itunes-Manalang' do
   use_frameworks!
 
   pod 'Alamofire'
+  pod 'Kingfisher'
 
   target 'Itunes-ManalangTests' do
     inherit! :search_paths

@@ -209,6 +209,19 @@ final class CoreDataManager {
         }
     }
     
+    static func delete<T: NSManagedObject>(entity: T.Type) {
+        let request = NSFetchRequest<T>(entityName: String(describing: entity))
+        request.includesPropertyValues = false
+        do {
+            for object in try mainContext.fetch(request) {
+                mainContext.delete(object)
+            }
+        }
+        catch let error as NSError {
+            CoreDataManagerError.log(error: error)
+        }
+    }
+    
     
     /// Delete All Objects using mainContext
     static func deleteAllObjects() {

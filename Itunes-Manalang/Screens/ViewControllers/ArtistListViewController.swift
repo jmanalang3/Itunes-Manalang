@@ -7,16 +7,22 @@
 //
 
 import UIKit
-import Alamofire
 
 class ArtistListViewController: UIViewController {
     
     private var tableView = UITableView(frame: .zero)
-    
-    var dataSource: ArtistListDataSource?
+    private var dataSource: ArtistListDataSource?
+    private var viewModel = ArtistListViewModel()
     
     fileprivate enum ViewId: String {
         case cell = "cell"
+    }
+    
+    convenience init(log: CDLog) {
+        self.init()
+        guard let artist = log.artist else { return }
+        let controller = ArtistDetailViewController(artist: artist)
+        self.navigationController?.pushViewController(controller, animated: false)
     }
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
@@ -30,61 +36,6 @@ class ArtistListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setup()
-        //        API.shared.getArtistList()
-        
-        
-        
-        
-        
-        let request = AF.request("https://itunes.apple.com/search?term=star&amp;country=au&amp;media=movie&amp;all")
-        request.responseJSON { (data) in
-            // print(data)
-        }
-        request.responseDecodable(of: GetArtistResponse.self) { (response) in
-            guard let value = response.value,
-                let data = value.data else { return }
-            
-            //  Log.d(data)
-            
-            DispatchQueue.main.async {
-                let context = CoreDataManager.mainContext
-                
-                data.forEach {
-                    do {
-                        try CDArtist.savingRecord(artist: $0, context: context)
-                    } catch {
-                        print(error.localizedDescription)
-                    }
-                }
-                
-                CoreDataManager.persist()
-                
-                
-                let fetchRequest = CoreDataManager.fetchRequest(entity: CDArtist.self,
-                                                                sortDescriptors: [],
-                                                                context: context)
-                let fetchedResultsController = CoreDataManager.fetchedResultsControllert(entity: CDArtist.self,
-                                                                                         request: fetchRequest,
-                                                                                         context: context)
-                
-                do {
-                    try fetchedResultsController.performFetch()
-                } catch {
-                    print(error.localizedDescription)
-                }
-                
-                guard let objects = fetchedResultsController.fetchedObjects else {
-                    return
-                }
-                
-                objects.forEach {
-                    Log.d($0.artistId)
-                    self.reloadData()
-                }
-            }
-            
-        }
-        
     }
 }
 
@@ -95,7 +46,7 @@ fileprivate extension ArtistListViewController {
     func setup(){
         dataSource = ArtistListDataSource(withIdentifier: ViewId.cell.rawValue)
         setupUI()
-        
+        setupBinding(with: viewModel)
     }
     
     func setupUI() {
@@ -108,8 +59,19 @@ fileprivate extension ArtistListViewController {
         tableView.register(UINib(nibName: String(describing: ArtistTableViewCell.self), bundle: nil),
                            forCellReuseIdentifier: ViewId.cell.rawValue)
         tableView.dataSource = dataSource
+        tableView.delegate = self
         view.backgroundColor = Palette.backgroundColor
-        
+    }
+    
+    func setupBinding(with viewModel: ArtistListViewModel) {
+        viewModel.onSuccess = { [weak self] in
+            guard let self = self else { return }
+            self.reloadData()
+        }
+        viewModel.onShowError = { error in
+            Log.e(error)
+        }
+        viewModel.getArtistList()
     }
 }
 
@@ -119,6 +81,22 @@ extension ArtistListViewController {
     
     func reloadData(){
         tableView.reloadData()
+    }
+    
+}
+
+// MARK: Setup Functionality
+
+extension ArtistListViewController: UITableViewDelegate {
+    
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        guard let items = dataSource?.items else { return }
+        let artist = items[indexPath.row]
+        let controller = ArtistDetailViewController(artist: artist)
+        navigationController?.pushViewController(controller, animated: true)
+        Log.d("item selected == \(artist)")
     }
     
 }
