@@ -26,7 +26,8 @@ public class CDArtist: NSManagedObject {
                 rawArtist = results.first
             }else {
                 rawArtist = CDArtist(context: context)
-                rawArtist?.insert(artist: artist, context: context)            }
+                rawArtist?.insert(artist: artist)
+            }
         }catch {
             throw error
         }
@@ -37,7 +38,7 @@ public class CDArtist: NSManagedObject {
 
 extension CDArtist {
     
-    func insert(artist: Artist, context: NSManagedObjectContext) {
+    func insert(artist: Artist) {
         if let id = artist.artistId {
             self.artistId = Int32(id)
         }

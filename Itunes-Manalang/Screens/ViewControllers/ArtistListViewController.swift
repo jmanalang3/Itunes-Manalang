@@ -20,9 +20,11 @@ class ArtistListViewController: UIViewController {
     
     convenience init(log: CDLog) {
         self.init()
-        guard let artist = log.artist else { return }
-        let controller = ArtistDetailViewController(artist: artist)
-        self.navigationController?.pushViewController(controller, animated: false)
+        DispatchQueue.main.async { [weak self] in
+            guard let self = self, let artist = log.artist else { return }
+            let controller = ArtistDetailViewController(artist: artist)
+            self.navigationController?.pushViewController(controller, animated: false)
+        }
     }
     
     override var preferredStatusBarStyle: UIStatusBarStyle {

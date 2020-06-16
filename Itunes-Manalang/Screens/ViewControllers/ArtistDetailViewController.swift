@@ -11,31 +11,40 @@ import UIKit
 class ArtistDetailViewController: UIViewController {
     
     private var customView = ArtistDetailView()
-    private var artist: CDArtist
+    private var artist: CDArtist?
     
     var log: CDLog?
-        
+    
     fileprivate enum ViewId: String {
         case cell = "cell"
     }
     
-    init(artist: CDArtist) {
+    convenience init(artist: CDArtist) {
+        self.init()
         self.artist = artist
-        super.init(nibName: nil, bundle: nil)
         title = artist.artistName
-        let context = CoreDataManager.mainContext
-        log = CDLog(context: context)
-        log?.saveRecord(artist: artist)
         customView.configure(with: artist)
-        CoreDataManager.persist()
+        
+        do {
+            let context = CoreDataManager.mainContext
+            log = try CDLog.saveRecordVisit(artist: artist, context: context)
+            CoreDataManager.persist()
+        } catch {
+            Log.e(error.localizedDescription)
+        }
+    }
+        
+    init() {
+        super.init(nibName: nil, bundle: nil)
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        log?.saveLastVisit()
+        guard let artist = artist else { return }
+        log?.saveLastVisit(artist: artist, state: false)
         CoreDataManager.persist()
     }
-        
+    
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
@@ -66,7 +75,7 @@ fileprivate extension ArtistDetailViewController {
     func setupUI() {
         view.backgroundColor = Palette.backgroundColor
     }
-
+    
 }
 
 // MARK: Setup Functionality
