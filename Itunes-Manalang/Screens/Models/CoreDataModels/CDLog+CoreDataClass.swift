@@ -58,7 +58,9 @@ extension CDLog {
     }
     
     static func fetchLastVistedScreen(context: NSManagedObjectContext) throws -> CDLog? {
-        let fetchRequest = CoreDataManager.fetchRequest(entity: CDLog.self, predicate: nil,
+        let stateKey = #keyPath(CDLog.state)
+        let predicate = NSPredicate(format: "\(stateKey) == %d", true)
+        let fetchRequest = CoreDataManager.fetchRequest(entity: CDLog.self, predicate: predicate,
                                                         sortDescriptors: [], context: context)
         do {
             let results = try context.fetch(fetchRequest)

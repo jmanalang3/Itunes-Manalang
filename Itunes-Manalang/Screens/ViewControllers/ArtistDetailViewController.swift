@@ -28,6 +28,7 @@ class ArtistDetailViewController: UIViewController {
         do {
             let context = CoreDataManager.mainContext
             log = try CDLog.saveRecordVisit(artist: artist, context: context)
+            log?.saveLastVisit(artist: artist, state: true)
             CoreDataManager.persist()
         } catch {
             Log.e(error.localizedDescription)
